@@ -1,0 +1,26 @@
+﻿{
+	propertyEditors: [
+	],
+    javascript: [
+
+        "~/App_Plugins/MerchelloProviders/js/merchello.providers.module.js",
+        "~/App_Plugins/MerchelloProviders/js/merchello.providers.models.js",
+        "~/App_Plugins/MerchelloProviders/js/merchello.providers.resources.js",
+        "~/App_Plugins/MerchelloProviders/js/merchello.providers.services.js",
+        "~/App_Plugins/MerchelloProviders/js/merchello.providers.directives.js",
+        "~/App_Plugins/MerchelloProviders/js/merchello.providers.controllers.js",
+
+
+        "~/App_Plugins/Merchello.CardConnect/js/payment.cardconnect.module.js",
+        "~/App_Plugins/Merchello.CardConnect/js/payment.cardconnect.resources.js",
+        "~/App_Plugins/Merchello.CardConnect/js/payment.cardconnect.services.js",
+        "~/App_Plugins/Merchello.CardConnect/js/payment.cardconnect.directives.js",
+
+        "~/App_Plugins/Merchello.CardConnect/js/payment.cardconnect.models.js",
+
+        "~/App_Plugins/Merchello.CardConnect/js/payment.cardconnect.controller.js"
+    ],
+    css: [
+        "~/App_Plugins/Merchello.CardConnect/assets/Css/styles.css"
+    ]
+}

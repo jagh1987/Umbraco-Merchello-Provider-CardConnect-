@@ -1,0 +1,87 @@
+﻿<div class="umb-panel merchello-side-panel" data-ng-controller="Merchello.Provider.Payment.CardConnectPaymentProviderController">
+    <div class="umb-modalcolumn-header">
+        <h4><localize key="general_edit" /> <b>{{dialogData.provider.name}}</b></h4>
+    </div>
+    <div class="umb-panel-body with-header with-footer">
+
+        <div class="control-group row-fluid">
+            <div class="col-xs-12 span12">
+                <label for="public-key">Merch Id</label>
+                <input class="col-xs-12 span12" name="public-key" type="text" data-ng-model="providerSettings.merchid">
+            </div>
+        </div>
+        <div class="control-group row-fluid">
+            <div class="col-xs-12 span12">
+                <label for="private-key">Merchant Descriptor</label>
+                <input class="col-xs-12 span12" name="private-key" type="text" data-ng-model="providerSettings.merchantDescriptor">
+            </div>
+        </div>
+        <div class="control-group row-fluid">
+            <div class="col-xs-12 span12">
+                <label for="private-key">ENDPOINT</label>
+                <input class="col-xs-12 span12" name="private-key" type="text" data-ng-model="providerSettings.endpoint">
+            </div>
+        </div>
+        <div class="control-group row-fluid">
+            <div class="col-xs-12 span12">
+                <label for="private-key">UserName</label>
+                <input class="col-xs-12 span12" name="private-key" type="text" data-ng-model="providerSettings.userName">
+            </div>
+        </div>
+        <div class="control-group row-fluid">
+            <div class="col-xs-12 span12">
+                <label for="private-key">Password</label>
+                <input class="col-xs-12 span12" name="private-key" type="text" data-ng-model="providerSettings.password">
+            </div>
+        </div>
+        <div class="control-group row-fluid">
+            <div class="col-xs-12 span12">
+                <label for="default-transaction-option">Default transaction option</label>
+                <select name="environment" class="col-xs-12 span12" data-ng-model="providerSettings.defaultTransactionOption">
+                    <option value="Authorize" selected="selected">Authorize</option>
+                    <option value="Capture">Capture</option>
+                    <option value="Refund">Refund</option>
+                    <option value="Inquire">Inquire</option>
+                    <option value="Settlement">Settlement</option>
+                    <option value="Funding">Funding</option>
+                    <option value="SignatureCapture" title="Will augment an existing authorization record with the provided signature data.">Signature Capture</option>
+                    <option value="OpenBatch" title="Opens a new batch associated the supplied merchid">Open Batch</option>
+                    <option value="CloseBatch" title="Attempts to close the batch identified by the merchid and batchid">Close Batch</option>
+                    <option value="Bin" title="Allows you to use a CardConnect token to determine what type of payment card is being used.">Bin</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="control-group row-fluid">
+            <div class="col-xs-12 span12">
+                <label for="private-key">Success URL</label>
+                <input class="col-xs-12 span12" name="private-key" type="text" data-ng-model="providerSettings.successUrl">
+            </div>
+        </div>
+        <div class="control-group row-fluid">
+            <div class="col-xs-12 span12">
+                <label for="private-key">Cancel URL</label>
+                <input class="col-xs-12 span12" name="private-key" type="text" data-ng-model="providerSettings.cancelUrl">
+            </div>
+        </div>
+        <div class="control-group row-fluid">
+            <label class="checkbox col-xs-12 span12">
+                <input type="checkbox" data-ng-model="dialogData.provider.encryptExtendedData"> Encrypt Provider Configuration
+            </label>
+        </div>
+    </div>
+
+    <div class="umb-panel-footer">
+        <div class="umb-el-wrap umb-panel-buttons">
+            <div class="btn-toolbar umb-btn-toolbar pull-right">
+                <a href data-ng-click="close()" class="btn btn-link">
+                    <localize key="general_cancel"><localize key="general_cancel" /></localize>
+                </a>
+                <button class="btn btn-primary"
+                        data-ng-click="submit(dialogData)">
+                    <localize key="buttons_save"><localize key="buttons_save" /></localize>
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
